@@ -617,7 +617,7 @@ span {
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   user-select: none;
-  margin-left: 90px;
+  margin-left: 150px;
 }
 
 .resume .portfolio-container.dark #mail {
@@ -902,9 +902,6 @@ span {
   }
   .resume .contact-section {
     padding-bottom: 0;
-  }
-  .resume .imagepart-contact > h2 {
-    /* margin-left: 80px; */
   }
 
   .resume .imagepart-contact > p {
