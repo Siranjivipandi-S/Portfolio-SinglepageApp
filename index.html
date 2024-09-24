@@ -402,16 +402,20 @@
                   type="email"
                   id="email-contact"
                   name="email"
+                  required
                 /><br /><br />
+                <span id="emailError"></span>
               </div>
               <div class="gaps-contact">
                 <label for="name-contact">Your name</label>
                 <input type="text" id="name-contact" name="name" /><br /><br />
+                <span id="nameError"></span>
               </div>
               <div class="gaps-contact">
                 <label for="message-contact">Your message</label>
-                <textarea id="message-contact" name="message"></textarea
-                ><br /><br />
+                <textarea id="message-contact" name="message"></textarea>
+                <span id="messageError"></span>
+                <br /><br />
               </div>
               <button class="contact-btn">Send Message</button>
             </form>

@@ -191,7 +191,12 @@ nav > ul > li > a:hover::before {
   transform: scale(1.05); /* Slight scaling on hover */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
-
+.gaps-contact span {
+  position: relative;
+  color: red; /* Set the error message color */
+  font-size: 14px;
+  padding: 0; /* Remove any padding */
+}
 .home-container .right img:hover {
   transform: scale(1.1); /* Additional scaling for the image */
   border-radius: 50px;
@@ -811,7 +816,7 @@ span {
 .resume .gaps-contact {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 .resume .contact-btn {
