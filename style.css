@@ -30,7 +30,7 @@ body {
 
 nav {
   background: linear-gradient(to right, #3498db, #2980b9, #3498db);
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 50px;
   display: flex;
   justify-content: space-around;
@@ -901,6 +901,10 @@ span {
 }
 
 @media (max-width: 480px) {
+  .toggle-container {
+    position: relative;
+    top: 14px;
+  }
   .resume .container {
     margin: 5px;
     padding: 5px;
@@ -1043,4 +1047,96 @@ span {
 
 .resume nav.dark > ul > li > a {
   color: #ecf0f1; /* Light color for nav links in dark mode */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+
+/* Toggle container */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Checkbox hidden */
+.toggle-checkbox {
+  display: none;
+}
+
+/* Label styles */
+.toggle-label {
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+/* Slider styles */
+.slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+/* Icon styles */
+#moon,
+#sun {
+  font-size: 18px;
+  transition: opacity 0.4s ease;
+}
+
+/* Initially showing sun, hiding moon */
+#moon {
+  transform: rotate(-10deg);
+  opacity: 0;
+  color: #fff;
+}
+
+#sun {
+  opacity: 1;
+  color: #f39c12;
+}
+
+/* Dark Mode active styles */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #333;
+}
+
+.toggle-checkbox:checked + .toggle-label .slider {
+  transform: translateX(30px);
+}
+
+/* Show moon and hide sun in dark mode */
+.toggle-checkbox:checked + .toggle-label #moon {
+  opacity: 1;
+}
+
+.toggle-checkbox:checked + .toggle-label #sun {
+  opacity: 0;
+}
+
+/* Dark Mode body styles */
+.toggle-checkbox:checked ~ body {
+  background-color: #121212;
+  color: #f4f4f4;
 }

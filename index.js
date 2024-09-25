@@ -17,35 +17,50 @@ const elementsToToggle = [
   contactcontainer,
   hero,
 ];
+const toggle = document.getElementById("toggle");
+const moon = document.getElementById("moon");
+const sun = document.getElementById("sun");
+
 const textElement = document.getElementById("developer-role");
 const texts = [
   "Full Stack Developer (MERN Stack)",
   "CS Graduate & Aspiring Master's Candidate in MCA",
 ];
 
-// Load the mode from localStorage on page load
+// Function to activate dark mode
+function activateDarkMode() {
+  elementsToToggle.forEach((element) => element.classList.add("dark"));
+  toggle.checked = true; // Ensure the toggle is checked for dark mode
+  moon.style.opacity = "1";
+  sun.style.opacity = "0";
+  modeIcon.classList.replace("fa-moon", "fa-sun");
+}
+
+// Function to deactivate dark mode
+function deactivateDarkMode() {
+  elementsToToggle.forEach((element) => element.classList.remove("dark"));
+  toggle.checked = false; // Ensure the toggle is unchecked for light mode
+  moon.style.opacity = "0";
+  sun.style.opacity = "1";
+  modeIcon.classList.replace("fa-sun", "fa-moon");
+}
+
+// Check saved mode from localStorage and activate if necessary
 const savedMode = localStorage.getItem("darkMode");
 if (savedMode === "enabled") {
   activateDarkMode();
 }
 
-// Toggle dark mode and save the state
-changeMode.addEventListener("click", () => {
-  elementsToToggle.forEach((element) => element.classList.toggle("dark"));
-
-  if (container.classList.contains("dark")) {
-    localStorage.setItem("darkMode", "enabled");
-    modeIcon.classList.replace("fa-moon", "fa-sun");
+// Event listener for the toggle switch
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    activateDarkMode();
+    localStorage.setItem("darkMode", "enabled"); // Save preference to localStorage
   } else {
-    localStorage.removeItem("darkMode");
-    modeIcon.classList.replace("fa-sun", "fa-moon");
+    deactivateDarkMode();
+    localStorage.removeItem("darkMode"); // Remove preference from localStorage
   }
 });
-
-function activateDarkMode() {
-  elementsToToggle.forEach((element) => element.classList.add("dark"));
-  modeIcon.classList.replace("fa-moon", "fa-sun");
-}
 
 // Text change logic
 let index = 0;
@@ -88,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Select the submit button
+// Form validation and submission
 const submit = document.querySelector(".contact-btn");
 submit.addEventListener("click", ValidateUser);
 
@@ -144,6 +159,7 @@ function ValidateUser(event) {
   // Perform further actions only if the form is valid
   if (isFormValid) {
     alert("Thanks for submitting the form");
-    location.reload();
+    // Optionally clear form fields
+    document.getElementById("contact-form").reset();
   }
 }
