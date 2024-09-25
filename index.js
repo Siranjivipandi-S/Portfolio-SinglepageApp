@@ -45,20 +45,12 @@ function deactivateDarkMode() {
   modeIcon.classList.replace("fa-sun", "fa-moon");
 }
 
-// Check saved mode from localStorage and activate if necessary
-const savedMode = localStorage.getItem("darkMode");
-if (savedMode === "enabled") {
-  activateDarkMode();
-}
-
 // Event listener for the toggle switch
 toggle.addEventListener("change", () => {
   if (toggle.checked) {
-    activateDarkMode();
-    localStorage.setItem("darkMode", "enabled"); // Save preference to localStorage
+    activateDarkMode(); // Save preference to localStorage
   } else {
-    deactivateDarkMode();
-    localStorage.removeItem("darkMode"); // Remove preference from localStorage
+    deactivateDarkMode(); // Remove preference from localStorage
   }
 });
 
