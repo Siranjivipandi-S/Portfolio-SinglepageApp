@@ -24,7 +24,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#projects-link">Projects</a></li>
         <li><a href="#contactss">Contact</a></li>
         <li>
           <div class="toggle-container">
@@ -87,7 +87,7 @@
             <div class="right">
               <div class="image-card">
                 <img
-                  src="profile.jpg"
+                  src="/assets/profile.jpg"
                   alt="Profile Image of Siranjivipandi S"
                 />
               </div>
@@ -166,7 +166,10 @@
               </p>
             </div>
             <div class="about-image">
-              <img src="about.jpg" alt="A brief description of the image" />
+              <img
+                src="/assets/about.jpg"
+                alt="A brief description of the image"
+              />
             </div>
           </div>
         </div>
@@ -176,12 +179,29 @@
       <section class="resume" id="resume">
         <div class="resume-head">
           <h1>Resume</h1>
-          <a href="SiranjivipandiS_Resume.pdf" download id="download-pdf" class="download-button">
+          <a
+            href="SiranjivipandiS_Resume.pdf"
+            download
+            id="download-pdf"
+            class="download-button"
+          >
             Download
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
             </svg>
-          </a>      </div>
+          </a>
+        </div>
         <div class="portfolio-container">
           <div class="head">
             <h1 id="name">SIRANJIVIPANDI S</h1>
@@ -406,6 +426,164 @@
             </ul>
           </div>
         </div>
+
+        <!-- Projects -->
+        <div class="project-container" id="projects-link">
+          <h1>Projects</h1>
+          <div class="project-grid">
+            <div class="project-item">
+              <img
+                src="https://skillicons.dev/icons?i=mongodb"
+                alt="Project Image"
+              />
+              <div class="project-heading">
+                <h2>MongoDB Video Upload</h2>
+                <p>Jul 2024</p>
+              </div>
+              <p>
+                This project implements a video upload system using MongoDB with
+                GridFS storage. It allows users to upload videos, which are
+                automatically split into smaller chunks and efficiently stored
+                in the database. GridFS ensures scalable storage for large video
+                files, enabling smooth retrieval and playback from the database.
+                This solution is ideal for handling large media files while
+                leveraging MongoDB's powerful document storage capabilities.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img src="/assets/mern.png" alt="Project Image" />
+              <div class="project-heading">
+                <h2>DSR Secure Tech</h2>
+                <p>Jun 2024</p>
+              </div>
+              <p>
+                This project involved converting an intricate Figma design into
+                a dynamic MERN (MongoDB, Express, React, Node.js) based web
+                application. The platform showcases the company's portfolio,
+                including detailed worker profiles, services offered, and
+                project highlights. The transition ensures a smooth, responsive
+                user experience, aligning the visual design with modern,
+                scalable web technology to enhance user engagement and company
+                visibility.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img src="/assets/mern.png" alt="Project Image" />
+              <div class="project-heading">
+                <h2>Crudify Post</h2>
+                <p>Jun 2024</p>
+              </div>
+              <p>
+                This MERN-based web application allows users to create, view,
+                update, and delete blog posts efficiently using the CRUD
+                operations. Integrated with Redux for state management, the
+                application ensures a seamless user experience by handling user
+                data and blog posts with high efficiency and performance. The
+                application leverages MongoDB, Express, React, and Node.js to
+                deliver a modern, responsive blogging platform.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img src="/assets/mern.png" alt="Project Image" />
+              <div class="project-heading">
+                <h2>Todo's App</h2>
+                <p>Jun 2024</p>
+              </div>
+              <p>
+                This project is a dynamic and user-friendly Todo App built with
+                the MERN stack (MongoDB, Express, React, Node.js). Leveraging
+                Redux for efficient state management, the app allows users to
+                easily create, edit, and track their tasks in real time. It's a
+                sleek solution for organizing daily tasks with smooth
+                performance and responsive design.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img src="/assets/mern.png" alt="Project Image" />
+              <div class="project-heading">
+                <h2>Food App</h2>
+                <p>Jul 2024</p>
+              </div>
+              <p>
+                Experience effortless dining with our Food Ordering App, crafted
+                using the MERN stack. This app integrates the Food Meal API for
+                diverse menu options, secure JWT login for user protection, and
+                Stripe for smooth payment processing. With a modern, intuitive
+                interface, users can easily browse menus, manage profiles, and
+                complete transactions seamlessly—all within one reliable
+                platform.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img
+                src="https://skillicons.dev/icons?i=react,redux"
+                alt="Project Image"
+              />
+              <div class="project-heading">
+                <h2>Chat App</h2>
+                <p>May 2024</p>
+              </div>
+              <p>
+                Built with the MERN stack and Firebase, this chat application
+                delivers seamless real-time messaging and user authentication.
+                Leveraging MongoDB, Express.js, React, and Node.js, it provides
+                a dynamic and responsive user experience. Firebase enhances the
+                app's functionality with real-time database capabilities and
+                secure authentication, ensuring smooth and secure communication.
+                Perfect for connecting users in an interactive and modern
+                environment.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img src="/assets/fullstack.jpg" alt="Project Image" />
+              <div class="project-heading">
+                <h2>Quotation Management</h2>
+                <p>Dec 2023</p>
+              </div>
+              <p>
+                A robust full-stack web application designed for efficient
+                quotation management. Built using HTML, CSS, JavaScript, PHP,
+                and MySQL, this system provides comprehensive billing facilities
+                and CRUD operations. Key features include seamless stock
+                addition and removal, ensuring streamlined inventory management
+                and accurate billing processes.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+            <div class="project-item">
+              <img src="/assets/network.jpg" alt="Project Image" />
+              <div class="project-heading">
+                <h2>Network Infrastructure for College Campus</h2>
+                <p>Apr 2023</p>
+              </div>
+              <p>
+                Designed and implemented a robust network for a college campus
+                using Cisco Packet Tracer. Integrated RIP and OSPF routing
+                protocols, DHCP for dynamic IP allocation, and VLANs for network
+                segmentation. Established MAIL, FTP, and HTTP services, and set
+                up an IoT system for centralized control of campus lighting,
+                fans, and AC units. This project enhances campus connectivity
+                and streamlines network management.
+              </p>
+              <!-- Button for interaction -->
+              <!-- <button class="btn">Learn More</button> -->
+            </div>
+          </div>
+        </div>
+
         <!-- //contact -->
         <div class="contact-section" id="contactss">
           <div class="wrap-contact">
@@ -417,7 +595,7 @@
                   >siranjivipandi@gmail.com</a
                 >
               </p>
-              <img src="plane.png" alt="Plane" id="plane" />
+              <img src="/assets/plane.png" alt="Plane" id="plane" />
             </div>
             <form id="contact-form">
               <div class="gaps-contact">

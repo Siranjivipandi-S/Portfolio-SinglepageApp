@@ -6,6 +6,7 @@ const about = document.querySelector(".about");
 const navcontainer = document.querySelector(".nav");
 const separator = document.querySelector(".separator");
 const profile = document.querySelector(".portfolio-container");
+const projectContainer = document.querySelector(".project-container");
 const contactcontainer = document.querySelector(".wrap-contact");
 const footer = document.querySelector("footer");
 const hero = document.querySelector(".hero");
@@ -18,6 +19,7 @@ const elementsToToggle = [
   contactcontainer,
   hero,
   footer,
+  projectContainer,
 ];
 const toggle = document.getElementById("toggle");
 const moon = document.getElementById("moon");
