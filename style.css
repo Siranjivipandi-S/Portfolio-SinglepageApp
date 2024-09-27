@@ -143,7 +143,7 @@ nav > ul > li > a:hover::before {
 }
 .wraped-home {
   position: relative;
-  top: 100px;
+  top: 90px;
 }
 .home-container {
   display: flex;
@@ -1139,4 +1139,58 @@ span {
 .toggle-checkbox:checked ~ body {
   background-color: #121212;
   color: #f4f4f4;
+}
+/* Footer Container Styling */
+footer {
+  background: linear-gradient(to bottom right, #80deea, #e0f7fa, #80deea);
+  color: black;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+footer.dark {
+  background: linear-gradient(to bottom right, #2c3e50, #34495e);
+  color: white;
+}
+
+/* Disable Blur for Dark Footer */
+footer.dark:before {
+  filter: blur(10px); /* No blur for dark theme */
+  background: linear-gradient(to bottom right, #2c3e50, #34495e);
+}
+footer:before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Adjust this to control how far the blur extends */
+  left: 0;
+  width: 100%;
+  height: 40px; /* Adjust based on the blur size */
+  background: linear-gradient(
+    to top,
+    rgba(224, 247, 250, 0),
+    rgba(224, 247, 250, 0.6)
+  );
+  filter: blur(10px); /* Controls the blur intensity */
+  z-index: -1;
+}
+
+footer span {
+  color: #3498db;
+  font-weight: bold;
+}
+/* Typography */
+#mt {
+  margin-top: 10px;
+}
+/* Copyright */
+footer .copyright {
+  font-size: 0.8em;
+  color: #464343;
+  margin-top: 10px;
+}
+footer.dark .copyright {
+  color: rgb(156, 150, 150);
 }
