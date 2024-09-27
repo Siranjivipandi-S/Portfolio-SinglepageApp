@@ -139,21 +139,14 @@ function validateFormValues(mailId, name, messageValue) {
 
 // Function triggered on form submission
 function ValidateUser(event) {
-  // Prevent the form from submitting
   event.preventDefault();
-
-  // Get input values
   const mailId = document.getElementById("email-contact").value;
   const name = document.getElementById("name-contact").value;
   const messageValue = document.getElementById("message-contact").value;
 
-  // Validate form fields
   const isFormValid = validateFormValues(mailId, name, messageValue);
-
-  // Perform further actions only if the form is valid
   if (isFormValid) {
     alert("Thanks for submitting the form");
-    // Optionally clear form fields
     document.getElementById("contact-form").reset();
   }
 }

@@ -169,17 +169,61 @@ nav > ul > li > a:hover::before {
   position: relative;
   overflow: hidden;
 }
+.resume-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 50px;
+}
+.icon {
+  width: 25px; /* Set icon size */
+  height: 20px;
+  margin-left: 8px; /* Space between text and icon */
+  color: white;
+}
+.resume-head > h1 {
+  color: #3498db;
+}
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  user-select: none;
+  color: white;
+  width: 150px;
+  background-color: #007bff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.container.dark .download-button {
+  background-color: #2980b9;
+}
+.download-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
 
-.blinking {
+.download-button:active {
+  transform: scale(0.95);
+}
+.hero.dark .blinking {
   position: absolute;
   width: 2px;
   height: 50px;
-  background-color: rgba(196, 188, 188, 0.1);
-  animation: blink 1.5s infinite ease-in-out, drop 3s infinite ease-in-out;
+  background-color: rgba(145, 137, 137, 0.908);
+  animation: blink 1.5s infinite ease, drop 3s infinite ease-in-out;
   background-blend-mode: screen;
   border-radius: 10px;
 }
-
+#mail {
+  text-decoration: none;
+  color: black;
+}
 @keyframes blink {
   0%,
   100% {
@@ -680,11 +724,11 @@ span {
   justify-content: center;
 }
 .resume .portfolio-container {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   margin: 20px;
   padding: 20px;
-  margin-top: 90px;
+  margin-top: 40px;
   background: linear-gradient(
     to bottom right,
     white,
@@ -962,6 +1006,9 @@ span {
 }
 
 @media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
   .toggle-container {
     position: relative;
     top: 14px;
@@ -971,22 +1018,28 @@ span {
     padding: 5px;
     padding-left: 15px;
   }
-
-  .resume .portfolio-container {
-    position: relative;
-    top: -125px;
-    margin-left: 15px;
+  .resume-head {
+    padding: 10px;
   }
 
+  .resume .portfolio-container {
+    /* position: relative;
+    top: -125px; */
+    margin-left: 15px;
+  }
+  .resume-head {
+    gap: 100px;
+  }
   .resume .wrap-contact {
     width: 90%;
     height: auto;
     flex-direction: column;
-    position: relative;
-    top: -65px;
+    /* position: relative;
+    top: -65px; */
     align-items: center;
     justify-content: center;
     border: 2px solid whitesmoke;
+    margin-bottom: 20px;
     box-shadow: 5px 5px 40px rgb(44, 43, 43);
   }
   .resume .contact-section {
@@ -1207,6 +1260,7 @@ footer {
   color: black;
   padding: 10px 0;
   width: 100%;
+  user-select: none;
   text-align: center;
   font-family: Arial, sans-serif;
   position: relative;
